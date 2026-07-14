@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, inital-scale=1.0" />
+<title></title>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>أول يوم اتقابلنا</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+      background-size: 800% 800%;
+      animation: gradient 20s ease infinite;
+      font-family: 'Cairo', sans-serif;
+    }
+    @keyframes gradient {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
+    }
+    .container {
+      background: rgba(255,255,255,0.8);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    input {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 18px;
+      text-align: center;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #e6004c;
+    }
+    .error {
+      margin-top: 10px;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>اكتبي تاريخ أول يوم اتكلمنا فيه</h2>
+    <input type="text" id="dateInput" placeholder="اكتبي التاريخ هنا">
+    <br>
+    <button onclick="checkDate()">تأكيد</button>
+    <div id="errorMsg" class="error"></div>
+  </div>
+
+  <script>
+    function checkDate() {
+      const input = document.getElementById("dateInput").value.trim();
+      const correctDate = "18/5/2026";
+      if(input === correctDate) {
+        window.location.href = "haneen.html";
+      } else {
+        document.getElementById("errorMsg").innerText = "غلط ❌";
+      }
+    }
+  </script>
+</body>
+</html>
+
+<script type="text/javascript">
+(function() {
+
+})();
+</script>
+</body>
+</html>
